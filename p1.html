@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio tags</title>
+    <style>
+        .audio *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .left p{
+            font-size: 0.9rem;
+            color: darkgrey;
+        }
+        .audio{
+            width: 80%;
+            background-color: rgba(203, 193, 193, 0.871);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .right button{
+            border:none;
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .right button :hover{
+            border: 1px solid black;
+        }
+        .right button a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Media Tags</h1>
+    </center>
+    <hr>
+    <h1>Displaying audios in websites using tags</h1>
+    <h1>Examplles</h1>
+    <audio src="./assests/example.html5.mp3" controls muted autoplay loop></audio>
+    <h1>Examples</h1>
+    <audio autoplay muted controls loop>
+        <source src="./assests/example.html5.mp3">
+    </audio>
+
+    <h2>example2</h2>
+    <div class="audio">
+        <div class="left">
+            <audio src="./assests/example.html5.mp3" controls></audio>
+            <img src="" alt="">
+            <div>
+                <h4>Radiant Surge</h4>
+                <p>Top-Flow</p>
+            </div>
+        </div>
+        <div class="right">
+            <button><a href="" download="./assests/example.html5.mp3">download</a></button>
+        </div>
+    </div>
+
+
+    <h2>example3</h2>
+    <div class="audio">
+        <div class="left">
+            <audio src="./assests/example.html5.mp3" controls></audio>
+            <img src="" alt="">
+            <div>
+                <h4>Radiant Surge</h4>
+                <p>Top-Flow</p>
+            </div>
+        </div>
+        <div class="right">
+            <button><a href="" download="./assests/example.html5.mp3">download</a></button>
+        </div>
+    </div>
+   
+</body>
+</html>

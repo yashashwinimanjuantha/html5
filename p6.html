@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popups</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        dialog{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: 0px;
+            top: 0;
+            background-color: #ffffff83;
+            outline: none !important;
+            border: none;
+        }
+        .card{
+            width: 280px;
+           min-height: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 0px 0px 2px #7a7979;
+            margin-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+        }
+        .top{
+            height: 130px;
+            background-color: rgb(255, 153, 0);
+        }
+        .image{
+            width: 80px;
+            height: 80px;
+            box-shadow: 0px 0px 3px #Ccc;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            transform: translateY(-40px);
+            background-color: #fff;
+        }
+
+        .image img{
+            width: 50px;
+        }
+        .text{
+            text-align: center;
+            padding: 10px;
+            padding-bottom: 30px;
+        }
+        .text p{
+            color: gray;
+        }
+        .text .dark-btn{
+            border: none !important;
+            padding: 8px;
+            background-color: #003380;
+            color: #fff;
+            border-radius: 100px;
+            outline: none;
+            margin-top: 20px;
+            width: 80px;
+        }
+        .text .light-btn{
+            border: none;
+            outline: none;
+            width: 80px;
+            background-color: transparent;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .test{
+            font-size: 1.2rem;
+            line-height: 2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showPopup1()">Popup1</button>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum error iste nihil voluptatem, blanditiis dolores architecto, ab illo quaerat tempore nostrum laboriosam similique suscipit? Possimus ad iste dignissimos rem porro!
+    Quae, reiciendis est. Id, aperiam sapiente quas quam itaque eveniet, ipsam quod doloribus repellat voluptatum voluptates quos voluptas? Omnis alias deserunt voluptatibus ratione cupiditate sapiente fugiat harum dolor vero neque!
+    Quae quidem fugiat rerum voluptatum magnam in corrupti maxime. Nulla fugit aliquam fugiat accusantium distinctio cumque corporis, voluptate velit eius blanditiis tenetur ea at, nihil quia optio reiciendis similique impedit.
+    Voluptate, quisquam. Soluta totam quam nisi quia? Nisi pariatur molestiae ducimus esse ut error eos aliquid. At tempora sint consequatur? Id rem nemo eaque deleniti adipisci exercitationem sapiente nostrum nam!
+    Quas cumque amet accusantium officiis ullam unde. Temporibus, tempora odit eum laborum iusto doloribus repellendus in facere. Eum quasi dolore et, rerum, doloremque ab aperiam magnam minima aliquid a libero.
+    Deserunt, at tempora officia maiores, quisquam porro, suscipit excepturi et nobis expedita accusantium distinctio dicta iure eveniet soluta nihil sunt doloribus similique consequuntur error sequi? Voluptate doloremque id debitis laborum.
+    Magnam quisquam debitis, voluptatibus eveniet sint suscipit velit culpa totam. Modi debitis, tenetur praesentium animi, aspernatur illo perferendis tempora libero repellendus magnam molestiae, voluptates sunt. Vitae esse corporis eveniet nostrum?
+    Quia veniam explicabo accusamus nesciunt esse quo neque animi soluta libero, ipsa sequi molestias est consequatur natus consequuntur incidunt, atque sapiente rerum magni iste placeat. Tempore perspiciatis praesentium in possimus?
+    Earum esse vero temporibus atque expedita quae voluptatibus quis, sapiente rem ratione dolorem optio consectetur tenetur. Eos nulla, perspiciatis sint provident sapiente nisi sunt quam, illum, est quisquam voluptas sit.
+    Voluptatibus necessitatibus laborum sequi molestiae itaque possimus! Illum possimus suscipit deserunt voluptates fugit eius non. Quasi reprehenderit, doloremque, obcaecati eveniet sequi deserunt necessitatibus exercitationem error animi soluta explicabo itaque maxime?
+    Doloribus porro omnis nam corrupti. Distinctio, sit. Voluptas dolore blanditiis reprehenderit. Porro doloribus animi sint ex aut architecto perferendis libero iste fugit numquam odit molestiae temporibus, unde laudantium explicabo autem?
+    Error facilis quaerat iste minus! Laudantium reiciendis blanditiis voluptatibus, ullam praesentium omnis velit, corporis excepturi deserunt ipsum aliquam ad, accusantium libero officiis atque totam in cumque deleniti aspernatur modi quidem?
+    Minus fugiat quo tempore soluta corrupti, natus quis quos architecto necessitatibus sint, veritatis sit atque autem, nisi laborum nihil pariatur. Iure fugiat placeat deserunt provident est nulla eveniet laudantium quaerat!
+    Quibusdam minus exercitationem nulla unde animi corrupti qui veritatis nam veniam ratione tempora soluta error distinctio optio nihil excepturi, nostrum facere minima temporibus enim? Hic optio quos tempora repellendus nemo?
+    Minima, fugiat ipsam obcaecati veritatis ratione id voluptate nemo nesciunt est! Blanditiis quibusdam architecto libero? Ipsa id perspiciatis dolorum aliquid nihil voluptatibus ipsam optio similique reiciendis, tempore amet laborum nobis.
+    Ut voluptates laboriosam voluptatem eos. Temporibus delectus amet corporis eum quaerat, suscipit repellat nemo aspernatur sed iste sit quibusdam totam itaque iure voluptas est porro reprehenderit, cum architecto alias minus.
+    Iusto corporis numquam aliquid tempora molestiae voluptatum recusandae, laboriosam deleniti sit ea, pariatur, quaerat consequatur non. Tempora consectetur pariatur, itaque, aut distinctio recusandae nostrum, ex eius iusto nemo dicta blanditiis?
+    Laboriosam voluptatem tempora delectus, vitae vel itaque libero minima dolorum commodi, incidunt, hic nam tenetur quas. Vero sit ea voluptate tempora illo, sunt nemo totam nesciunt quae! Quidem, fugit a!
+    Nihil quos ipsa atque odit enim amet perspiciatis eaque illo obcaecati error sequi eius cum harum sed distinctio optio, necessitatibus beatae repudiandae ab magnam sapiente neque. Qui, itaque? Deserunt, accusantium.
+    Sit nobis vitae neque architecto beatae? Nihil quisquam dignissimos iusto ipsum corporis quia, alias fugit reprehenderit deserunt ab optio vero quaerat voluptatem deleniti quo, ullam doloremque dolorem! Vel, ullam voluptas.</p>
+    <dialog id="popup1" onclick="closePopup1()">
+        <div class="card">
+            <div class="top">
+            </div>
+
+            <div class="image">
+                <img src="https://cdn-icons-png.freepik.com/256/7330/7330832.png?ga=GA1.1.1920887484.1725306167&semt=ais_hybrid" alt="loading">
+            </div>
+            <div class="text">
+                <h3>Congrats Julia!!!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, asperiores?</p>
+                <button class="dark-btn">Share</button>
+                <button class="light-btn">Skip</button>
+            </div>
+        </div>
+    </dialog>
+    
+
+    <script>
+        let popup1 = document.getElementById('popup1');
+       function showPopup1(){
+        popup1.show();
+       }
+
+       function closePopup1(){
+        popup1.close();
+       }
+    </script>
+</body>
+</html>

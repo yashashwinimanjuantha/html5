@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+        }
+        .first{
+            background-color: rgb(243, 243, 243);
+            width: 80px;
+            height: 100vh;
+            border: 1px solid #ccc;
+        }
+        .second{
+            background-color:  rgb(255, 255, 255);
+            height: 100vh;
+            flex: 4;
+            border: 1px solid #ccc;
+        }
+        .third{
+            background-color: rgb(236, 236, 236);
+            height: 100vh;
+            flex: 9;
+            border: 1px solid #ccc;
+        }
+        .third{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: rgb(87, 87, 87);
+        }
+        .third div img{
+            width:300px;
+        }
+        .third div{
+            margin-top: 150px;
+        }
+        .third h1{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+        .main-btn{
+            margin-top: 30px;
+            padding: 10px 30px;
+            border: none;
+            background-color: #06583e;
+            color: #fff;
+            border-radius: 100px;
+        }
+        .main-btn:hover{
+            box-shadow: 0px 3px 5px #ccc;
+            cursor: pointer;
+        }
+        .first ul{
+            list-style-type: none;
+            padding: 0px;
+            text-align: center;
+            color: rgb(71, 69, 69);
+            padding-top: 20px;
+
+        }
+        .first ul li i{
+            font-size: 1.5rem;
+        }
+        .first ul li{
+           
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 15px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .first ul li:hover{
+            background-color: #3a383833;
+            color: #06583e;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header i{
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: rgb(90, 89, 89);
+        }
+        .search{
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .search input{
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        .search i{
+            font-size: 0.9rem;
+            color: gray;
+        }
+        .chat{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 15px;
+            cursor: pointer;
+
+        }
+        .chat:hover{
+            background-color: #5f5a5a19;
+        }
+        .chat img{
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+        }
+        .text{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            padding-bottom: 5px;
+        }
+        .text small{
+            color: rgb(82, 81, 81);
+        }
+        .text p{
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="first">
+            <ul>
+                <li><i class="fa-solid fa-comment"></i></li>
+                <li><i class="fa-solid fa-circle-notch"></i></li>
+                <li><i class="fa-regular fa-comment-dots"></i></li>
+                <li><i class="fa-solid fa-user-group"></i></li>
+                <li><i class="fa-regular fa-circle-dot"></i></li>
+            </ul>
+        </div>
+        <div class="second">
+            <div style="padding: 20px;">
+                <div class="header">
+                    <h1>Chats</h1>
+                    <div>
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+
+            <div class="chat">
+                <img src="https://staticdelivery.nexusmods.com/mods/4932/images/thumbnails/16/16-1682547355-449858264.jpeg" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://staticdelivery.nexusmods.com/mods/4932/images/thumbnails/16/16-1682547355-449858264.jpeg" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMFTFjYCu6HWnfspcstISJx39q5Ur1F936Q&s" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4DQ-tp12zlDGEUfulC2NNYwJ7vvskGXip6w&s" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlgpMW6s-YqirYpzabaR4uiCC6mmsWgN3XiQ&s" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://staticdelivery.nexusmods.com/mods/4932/images/thumbnails/16/16-1682547355-449858264.jpeg" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+            <div class="chat">
+                <img src="https://staticdelivery.nexusmods.com/mods/4932/images/thumbnails/16/16-1682547355-449858264.jpeg" alt="">
+                <div class="text">
+                   <div>
+                    <p><b>Conatct1</b></p>
+                    <small>Lorem, ipsum dolor.</small>
+                   </div>
+
+                    <small>17/9/2023</small>
+                </div>
+                
+            </div>
+        </div>
+        <div class="third">
+         <div>
+            <img src="https://static.whatsapp.net/rsrc.php/v3/y6/r/wa669aeJeom.png" alt="loading...">
+            <h1>Download Whatsapp for Windows</h1>
+            <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit impedit dolores <br> possimus ex maiores.</small></p>
+            <button class="main-btn">Get from Microsoft Store</button>
+         </div>
+
+         <p><small><i class="fa-solid fa-lock"></i> Your Persnol messages are end-to-end encrypted</small></p>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #header{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+            box-shadow: 0px 3px 5px #ccc;
+            padding: 10px 30px;
+        }
+        #header img{
+            width: 40px;
+        }
+        #header #nav{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #header #nav li a{
+            text-decoration: none;
+            color: #222;
+        }
+        #header #nav li:nth-child(1) a{
+            color: #03efa8;
+        }
+        #header #nav li:hover a{
+                color: #03efa8;
+        }
+        .main-btn{
+            border: none;
+            padding: 8px 15px;
+            background-color: #03efa8;
+        }
+       .main-btn:hover{
+            background-color: #003a28;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.8s;
+        }
+        .banner{
+            padding: 15px;
+            background-color: #03efa8;
+            color: #fff;
+            text-align: center;
+        }
+        #section{
+            display: flex;
+            padding: 3%;
+
+        }
+        .left{
+            height: 80vh;
+            flex: 1;
+        }
+        .right{
+            height: 80vh;
+            flex: 1;
+
+        }
+        .heading{
+            font-size: 4rem;
+        }
+        .text-main{
+            color: #03efa8;
+        }
+
+        .subtitle{
+            font-size: 1.2rem;
+            color: rgb(78, 78, 78);
+        }
+        .left button{
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #article{
+            padding: 6% 3%;
+        }
+
+        .container{
+            display: flex;
+            gap: 30px;
+            padding: 3%;
+        }   
+        .container .card{
+            flex: 1;
+            height: 500px;
+        }
+        #footer{
+            padding: 3%;
+            min-height: 70vh;
+            background-color: #0c0c0c;
+            color: #fff;
+            display: flex;
+            gap: 10px;
+        }
+        #footer .subtile{
+            font-size: 1.3rem;
+            margin-top: 8px;
+           
+        }
+        #footer ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+        #footer ul li{
+            margin-bottom: 10px;
+        }
+        #footer ul li a{
+            text-decoration: none;
+            color: #ccc;
+        }
+        #footer h2{
+            margin-bottom: 20px;
+        }
+        .footer-card{
+            flex: 1;
+        }
+        .footer-card:nth-child(1){
+            flex: 2;
+        }
+        .footer-card:nth-child(4){
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Migration of html tags to html5</h1>
+    </center>
+
+    <!-- <p>to create header in html5 we have header tag.</p> -->
+    <!-- <header></header> -->
+    <div class="banner">
+        <p>We're open and available for takeaway & delivery. Order Now</p>
+    </div>
+    <div id="header">
+        <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa341ab76b5e7_Logo.svg" alt="logo is loading...">
+        <ul id="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button class="main-btn">Create Account</button></li>
+        </ul>
+    </div>
+
+    
+    <!-- we can create section tag using div only by migrating using id or class name for div  -->
+     <!-- <section></section> -->
+
+     <div id="section">
+        <div class="left">
+            <h1 class="heading">Beautiful food & <br> takeaway, <span class="text-main">delivered</span> <br> to your door.</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam veniam voluptatum qui illo voluptates veritatis voluptatibus a voluptas incidunt voluptatem,</p>
+
+            <button class="main-btn">Place an Order</button>
+            <br><br><br>
+
+            <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa3a3f976b5c3_trustpilot-logo.svg" alt="loading" width="80">
+            <p><span class="text-main">4.8 out of 5 </span>based on 2000+ reviews</p>
+        </div>
+
+
+        <div class="right">
+            <img src="https://assets.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa395f376b5c1_Hero%20Image.png" alt="loading" width="100%">
+        </div>
+     </div>
+
+     <!-- to create article in website in html5 we have one tag that is article tag  -->
+      <!-- <article></article> -->
+
+
+      <div id="article">
+        <center>
+            <h1 class="text-main heading">How it works.</h1>
+            <br>
+            <div class="container">
+                <div class="card">
+                    <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa3dc2276b60f_Step%2001.png" alt="loading" width="100%">
+                    <br><br><br>
+                    <h2>Adapt your menu items</h2>
+                    <p class="subtitle">Easily adapt your menu using the webflow CMS and allow customers to browse your items.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa3e5bf76b60e_Step%2002.png" alt="loading" width="100%">
+                    <br><br><br>
+                    <h2>Accept online orders & takeout</h2>
+                    <p class="subtitle">Easily adapt your menu using the webflow CMS and allow customers to browse your items.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa3001a76b610_Step%2003.png" alt="loading" width="100%">
+                    <br><br><br>
+                    <h2>Manage delivery or takeout</h2>
+                    <p class="subtitle">Easily adapt your menu using the webflow CMS and allow customers to browse your items.</p>
+                </div>
+            </div>
+        </center>
+      </div>
+
+      <!-- to create footer in  html5 we can use footer tag  -->
+       <!-- <footer></footer> -->
+
+       <div id="footer">
+            <div class="footer-card">
+                <img src="https://cdn.prod.website-files.com/5e865e09d8efa3310676b585/5e865e09d8efa341ab76b5e7_Logo.svg" alt="loading" width="40">
+                <p class="subtile">Takeaway & Delivery template <br>
+                    for small - medium businesses.</p>
+            </div>
+            <div class="footer-card">
+                <h2>company</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-card">
+                <h2>TEMPLATE</h2>
+                <ul>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Changelog</a></li>
+                    <li><a href="#">Licence</a></li>
+                    <li><a href="#">Webflow University</a></li>
+                </ul>
+            </div>
+            <div class="footer-card">
+                <h2>FLOWBASE</h2>
+                <ul>
+                    <li><a href="#">More Cloneables</a></li>
+                </ul>
+            </div>
+       </div>
+    </body>
+</html>

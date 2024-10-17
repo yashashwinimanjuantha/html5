@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>HTML CANVAS TAG</h1>
+        <p>this is the canvas tag it is used to describe the graphics using the scripting languages like javascripts</p>
+    </center>
+    <hr>
+    <center><h1>Example to create a circle in canvas tag using js</h1></center>
+    <canvas id="canvas1">
+
+    </canvas>
+    <p><b>Note: It is always necessary to specify the id attribute and the height & the width attribute to define the size of the canvas.You can ahave multiple canvas elements on one page</b></p>
+    <script>
+        const canvas1 = document.getElementById('canvas1').getContext('2d');
+        canvas1.fillStyle = 'green';
+        canvas1.arc(200, 50, 30, 0, 2*Math.PI , false);//(x,y,radius, starting_point, arc_value)
+        canvas1.fill();
+        canvas1.stroke();
+    </script>
+</body>
+</html>

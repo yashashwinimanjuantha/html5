@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Tree</title>
+</head>
+<body>
+    <div id="svgContainer"></div>
+
+    <script>
+        function createSVGTree() {
+            // Create SVG element
+            const svgNS = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNS, "svg");
+            svg.setAttribute("width", "200");
+            svg.setAttribute("height", "300");
+            svg.setAttribute("viewBox", "0 0 200 300");
+
+            // Function to create triangles for the tree
+            function createTriangle(x, y, width, height, color) {
+                const triangle = document.createElementNS(svgNS, "polygon");
+                const points = '${x}, ${y} ${x + width / 2}, ${y - height} ${x + width},${y}';
+                triangle.setAttribute("points", points);
+                triangle.setAttribute("fill", color);
+                return triangle;
+            }
+
+            // Function to create the trunk (rectangle)
+            function createTrunk(x, y, width, height, color) {
+                const rect = document.createElementNS(svgNS, "rect");
+                rect.setAttribute("x", x);
+                rect.setAttribute("y", y);
+                rect.setAttribute("width", width);
+                rect.setAttribute("height", height);
+                rect.setAttribute("fill", color);
+                return rect;
+            }
+
+            // Add triangles (leaves)
+            svg.appendChild(createTriangle(50, 150, 100, 50, "#31673A"));  // bottom triangle
+            svg.appendChild(createTriangle(60, 120, 80, 50, "#154F38"));  // middle triangle
+            svg.appendChild(createTriangle(70, 90, 60, 50, "#2D9C5B"));  // top triangle
+
+            // Add trunk
+            svg.appendChild(createTrunk(90, 150, 20, 40, "#A03E36")); // trunk
+
+            // Append the SVG to the container
+            document.getElementById("svgContainer").appendChild(svg);
+        }
+
+        // Create the tree when the page loads
+        window.onload = createSVGTree;
+    </script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            margin: auto;
+            width: 100%;
+            display: flex; 
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+            cursor: pointer;
+           
+
+        }
+        div{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+        code pre{
+            background-color: rgba(201, 189, 189, 0.907);
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        figure{
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-right: 80px;
+            margin-left: 80px;
+
+        }
+        p{
+        font-size: 22px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h4{
+            font-size: 40px;
+        }
+        li{
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            transform: translateX(30px);
+        }
+        .hero{
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 600px;
+            height: 300px;
+            margin-left:90px ;
+            margin-right: 90px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: space-around;">
+                <h2>Meduim</h2>
+            <search style="padding: 20px;">Search</search>
+            </div>
+           <div style="flex: 1; display: flex; transform: translatex(1200px); align-items: center;justify-content: space-around;">
+            <button style="margin: 20px; padding: 10px; border-radius: 30px;">Signup</button>
+            <p style="margin-right: 10px;">SignIn</p>
+           </div>
+        </div>
+    </header>
+   <center style="margin: 30px; font-size: 30px; "> <h1>Java Tutorial - A Beginner’s Guide To</h1>
+    <h1>Java Programming</h1></center>
+  
+  <div class="hero">
+    <figure>
+       <center>
+        <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*JlfunJy-wuk4s_liTwa0oQ.png" alt="loading">
+        <p style="font-size: small;">Java Tutorial - Edureka</p><br><br>
+       </center>
+        <figcaption>
+            <p>
+                In this Java Tutorial blog, I am going to introduce you to some of the basic concepts of Java. But before moving ahead, I would suggest you get familiar with what is Java, features of Java and how can you install Java on your system. This will help you grab the coming concepts quickly and easily.
+            </p>
+            <br><br>
+            <p>Now, let us move ahead in this Java Tutorial blog, where we will understand each aspect of Java in the following sequence:</p><br><br>
+            <ul>
+                <li>Hello World Program</li>
+                <li>Member variables in Java</li>
+                <li>Data types and operators</li>
+                <li>Control Statements</li>
+                <li>Classes & Objects</li>
+                <li>Structure of a program</li>
+                <li>Arrays</li>
+                <li>OOPs concept — Inheritance, Encapsulation, Polymorphism, Abstraction</li>
+                <br>
+                <br>
+            </ul>
+            <p>Let’s get started with the first topic in Java Tutorial blog i.e Hello World Program.</p>
+            <br><br><br>
+            <h4>Hello World Program</h4>
+            <br><br>
+            <p>First of all, I will give you a simple overview of how a Java program looks like. In the below code, I have <b>created a class - MyFirstJavaProgram</b> and <b>printed “Hello World”</b>. Go ahead and try to execute the below example in your Eclipse IDE. Do not worry, we will discuss Java class in a while.</p>
+            <code>
+              <pre>
+                public class MyFirstJavaProgram {
+                    public static void main(String[] args)
+                {
+                 System.out.println("Hello World");
+                }
+             }
+              </pre>
+            </code>
+             <br><br>
+             <p>Next, let us understand different member variables in Java.</p>
+            <h4>Member Variables</h4>
+            <p>A member variable plays a major role in a class as it is used to store a data value. When we define a class, we can declare a member variable. These variables are members of a class.
+                Member variables are further classified into three types:</p>
+                <ul>
+                    <li>Local variable</li>
+                    <li>Instance variable</li>
+                    <li>Class/Static variable</li>
+                </ul>
+                <br><br><br>
+                <p>Let me discuss each one of them:</p><br><br>
+                <h4>Local variable:</h4>
+                <br><br>
+                <code>
+                   <pre>
+                    public class Car {
+                        public void display(int m){  // Method
+                              int model=m;        // Created a local variable model
+                              System.out.println("Model of the car is" +model);
+                       }
+                   </pre>
+                </code><br><br>
+                <p>In the above code, my local variable is ‘model’ which I have declared inside a method ‘display’ which has a parameter ‘m’</p>
+                <br>
+                <h4>Instance variable:</h4>
+                <p>An instance variable is declared in a class but outside a method, constructor or any block. Let’s understand this with a programmatic example.</p>
+                <br><br>
+                <code><pre>
+                    public class Car {
+                        public String color;     // Created an instance variable color
+                       
+                  Car(String c)
+                     {
+                      color=c;
+                     }
+                   
+                  public void display() {  // Method 
+                        System.out.println("color of the car is"+color);
+                     }
+                   
+                  public static void main(String args[]){
+                                Car obj=new Car("black");
+                                  obj.display();
+                         }
+                  }
+                </pre>
+                </code><br><br>
+                <p>In the above code, ‘color’ is my instance variable which has a value “black” associated with it.</p>
+                <h4>Class variable:</h4>
+                <p>Class variables are also called static variables. These variables have only one copy that is shared by all the different objects in a class. Let’s understand this with a programmatic example.</p>
+                <br><br><br>
+                <code>
+                    <pre>
+                        public class Car {
+                            public static int tyres;   // Created a class variable tyres
+                              public static void main(String args[]){
+                                 tyres=4;
+                                 System.out.println("Number of tyres are"+tyres);
+                              }
+                      }
+                    </pre>
+                </code><br><br>
+                <p>All cars must be having 4 tyres, right? So in my above code, I have declared a static variable as ‘tyre’ whose value remains same throughout the class.</p> <br><br><br>
+                <p>Let’s move ahead in this article and look at our next topic i.e data types and operators in Java.</p>
+                <br><br><br>
+                <h4>Data types</h4>
+                <br>
+                <p>A data type is used to represent different values which are stored in a variable. They are mainly classified into 4 different aspects — Integer, Float, Character, and Boolean. You can refer to the below image to understand the different data types with respect to the memory allocated to them.
+                </p>
+               <center>
+                <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*crGkIjqZwRoWwYn12GdHEg.png" alt="loading">
+                <p style="font-size: small;">Primitive Data Types - Java Tutoria</p><br><br><br>
+               </center>
+                <p>As you can see in the above image, data types are of 4 major types.</p>
+                <ul>
+                    <li>The first data type is an Integer which stores a numerical value.</li>
+                    <li>Now, if a numerical value contains a decimal part, it will be referred to as float.</li>
+                    <li>Next, if you wish to store a character, then the third data type i.e char is used. In char, you can store any alphabetical character as well as a special character.</li>
+                    <li>The last data type is Boolean which stores only ‘true’ or ‘false’ value.</li>
+                    <br><br>
+                </ul>
+                <p>Let’s move forward and look at the various data operations which you can perform in Java.</p>
+                <br>
+                <h4>Data Operators</h4>
+                <p>There are mainly 4 different types of operators, which are listed below:</p>
+                <ul>
+                    <li>Arithmetic Operator: Perform arithmetic operations such as addition, subtraction, multiplication, division, and modulus.</li>
+                    <li>Unary Operator: Unary operators are used to increment or decrement a particular value. For example: ++ stands for increment, — — stands for decrement.</li>
+                    <li>Relational Operator: It defines some kind of relation between two entities. For example: <, >, <=, >=, !=, ==.</li>
+                    <li>Logical Operator: Logical operators are typically used with boolean (logical) values.</li>
+                </ul>
+                <p>Next, let us move forward and understand the concept of control statements.</p><br><br><br>
+                <h4>Control statements</h4>
+                <p>Control statements are the statements that define the flow of your program. There are 3 types of control statements in Java: Selection, iteration, and jump statements.</p>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*tFNXL5hgO5d8GiFZXGg9Wg.png" alt="loading">
+                    <p style="font-size: small;">Control Statements in Java - Java Tutorial</p>
+                </center>
+               <br><br>
+                <p>Let us see these control statements one by one.</p>
+                <h4>Selection Statements:</h4>
+                <br><br>
+                <p>Selection statements allow you to control the flow of the program during runtime on the basis of the outcome of expression or state of a variable. For example: you want to eat pizza, but then where can you get that pizza at the best price. You can select between various popular options like Domino’s, Pizza Hut or any other outlet. So here you are following a selection process from the various options available.</p><br><br>
+                <p>Now, these statements can be further classified into the following:</p>
+                <ul>
+                    <li>If-else Statements</li>
+                    <li>Switch Statements</li>
+                </ul><br><br>
+                <p>Refer to the following flowchart to get a better understanding of if-else statements:</p>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*_FNN9vvkryQsFrUT6ek6Mg.png" alt="loading">
+                    <p style="font-size: small;">If- Else Statement Flowchart - Java Tutorial</p>
+                </center>
+               <br><br>
+                <p>In this flowchart, the code will respond in the following way:</p>
+                <ol>
+                    <li>First of all, it will enter the loop where it checks the condition.</li>
+                    <li>   If the condition is true, the set of statements in ‘if’ part will be executed.</li>
+                    <li>If the condition is false, the set of statements in the ‘else’ part will be executed.</li>
+                </ol><br><br><br>
+                <p>Here you must have got an idea of how these if-else statements work. Now, how can we use these statements in Eclipse IDE? Let’s have a look at the code:</p><br><br><br>
+                <code>
+                    <pre>
+                        public class Compare {
+                            int a=10,
+                            int b=5;
+                         
+                       if(a>b)
+                             {  // if condition
+                            System.out.println(" A is greater than B");
+                             }
+                       else
+                             {     // else condition
+                             System.out.println(" B is greater");
+                             }
+                       }
+                    </pre>
+                </code><br><br><br>
+                <p>In the above code, I have created a class Compare where I have compared two numbers ‘a’ and ‘b’. First of all, it will go in ‘if’ condition where it checks whether the value of ‘a’ is greater than ‘b’ or not. If the condition is true, it will print “A is greater than B” else it will execute “B is greater”.</p><br><br>
+                <p>Moving on, we have a Switch case statement. The switch statement defines multiple paths for execution of a set of statements. It is a better alternative than using a large set of if-else statements as it is a multi-way branch statement.</p><br><br>
+                <p>Moving on, we have a Switch case statement. The switch statement defines multiple paths for execution of a set of statements. It is a better alternative than using a large set of if-else statements as it is a multi-way branch statement.</p><br><br>
+                <p>Refer to the following flowchart to get a better understanding of switch statements:</p>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:542/format:webp/1*awyXcbNCc5P8VQJ7msAJOw.png" alt="loading">
+                    <p style="font-size: small;">Switch Statement Flowchart- Java Tutorial</p>
+                </center>
+               
+                <ol>
+                    <li>First of all, it will enter the switch case which has an expression.</li>
+                    <li> Next, it will go to Case 1 condition, checks the value passed to the condition. If it is true, Statement             will execute. After that, it will break from that switch case.</li>
+                    <li> In case it is false, then it will switch to the next case. If Case 2 condition is true, it will execute the statement and break from that case, else it will again jump to the next case.</li>
+                    <li> Now let’s say you have not specified any case or there is some wrong input from the user, then it will go to the default case where it will print your default statement.</li>
+                </ol><br><br>
+                <p>Again, if we look at the code for switch statements in IDE, here it is:</p>
+                <code>
+                   <pre>
+                    public class SwitchExample { 
+                        int week=7;
+                        String weeknumber;
+                    
+                   switch(week){    // switch case
+                   case 1:
+                             weeknumber="Monday";
+                          break;
+                        
+                   case2:
+                             weeknumber="tuesday";
+                          break;
+                    
+                   case3:
+                             weeknumber="wednesday";
+                          break;
+                    
+                   default:        // default case
+                             weeknumber="invalid week";
+                          break;
+                        }
+                     System.out.println(weeknumber);
+                        } 
+                   }
+                   </pre>
+                </code><br><br>
+                <p>In the above code, I have created a class SwitchExample which has 3 cases that print days of a week. It also has a default case which is executed whenever a user doesn’t specify a case.</p><br><br>
+                <p>Concluding both of the selection statements, we understood that if we are comparing two statements, we are using if-else, but let’s say if you are checking a specific value against a particular statement, then we are going for the Switch statement.</p><br><br>
+                <p>Next, there is another set of control statements, i.e Iteration Statements.</p><br>
+                <h4>Iteration Statements:</h4>
+                <p>In Java, these statements are commonly called loops, as they are used to iterate through small pieces of code. Iteration statements provide the following types of loop to handle looping requirements.</p><br>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*56_vCYje90O1x0bcaopF7g.png" alt="loading">
+                <p style="font-size: small;"></p>
+                </center>
+                <br><br>
+                <p>Let’s understand each one of them in detail:</p><br><br>
+                <h4>While statement:</h4><br><br>
+                <p>Repeat a group of statements while a given condition is true. It tests the condition before executing the loop body. Let’s understand this better with a flowchart</p>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*0uIkulX_0nvoIEVfKwiQXw.png" alt="loading">
+                    <p style="font-size: small;">While Loop Flowchart - Java Tutorial</p>
+                </center>
+               <br><br>
+                <p>In this flowchart, the code will respond in the following steps:</p><br><br>
+                <ol>
+                    <li>First of all, it will enter the loop where it checks the condition.</li>
+                       <li> If it’s true, it will execute the set of code and repeat the process.</li>
+                     <li>   If it’s False, it will directly exit the loop.</li>
+                </ol><br><br>
+                <p>Now, let us see how you can implement the code in IDE.</p>
+                <code>
+                  <pre>
+                    public class WhileExample {
+                        public static void main(String args[]) {
+                           int a=5;
+                     while(a<10)   //while condition
+                           {
+                           System.out.println("value of a" +a);
+                           a++;
+                     System.out.println("\n");
+                           }
+                      }
+                  }
+                  </pre>
+            </code><br><br>
+            <p>In the above code, it first checks the condition whether the value of a is less than 10 or not. Here, the value of a is 5 which in turn satisfy the condition, and thus perform functions.</p><br><br>
+            <h4>Do-while statement:</h4>  <br><br>
+            <p>It is like a while statement, but it tests the condition at the end of the loop body. Also, it will execute the program at least once. Let’s understand this better with a flowchart:</p><br><br>
+            <center>
+                <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*9RkbyFU9EmbDpMmroMWHxA.png" alt="loading">
+            <p style="font-size: small;">Do-while Loop Flowchart — Java Tutorial</p>
+            </center><br><br>
+            <ol>
+                <li>irst of all, it will execute a set of statements that is mentioned in your ‘do’ block.</li>
+                  <li>  After that, it will come to ‘while’ part where it checks the condition.</li>
+                   <li> If the condition is true, it will go back and execute the statements.</li>
+                 <li>   If the condition is false, it will directly exit the loop.</li>
+            </ol><br><br>
+            <p>Let’s see how you can implement the code in IDE.</p><br><br>
+            <code>
+              <pre>
+                public class DoWhileExample {
+                    public static void main(string args[]){
+                        int count=1;
+                do {                        // do statement
+                   System.out.println("count is:"+count);
+                   count++;
+                 }
+                while (count<10)            // while condition
+                     }
+                }
+              </pre>
+            </code><br><br>
+            <p>In the above code, it will first execute the ‘do’ statements and then jump to the while part. In this program, the output would be: 1 2 3 4 5 6 7 8 9.</p>
+            <h4>For statement:</h4><br><br>
+            <p>For statement execute a sequence of statements multiple time where you can manage the loop variable. You basically have 3 operations here: <b>initialization, condition, and iteration.</b> Let’s understand this better with a flowchart:
+            </p>
+            <center>
+                <img src="https://miro.medium.com/v2/resize:fit:546/format:webp/1*6QoAFPMr6KuQffooVHdgiQ.png" alt="loading">
+                <p style="font-size: small;">For Loop Flowchart - Java Tutorial</p>
+    
+            </center>
+            <p>In this flowchart, the code will respond in the following steps:</p>
+            <br><br>
+            <ol>
+                <li>First of all, it will enter the loop where it checks the condition.</li>
+                 <li>   Next, if the condition is true, the statements will be executed.</li>
+                   <li> If the condition is false, it directly exits the loop.</li>
+            </ol><br>
+            <p>Let’s see how you can implement the code in IDE.</p>
+            <code>
+              <pre>
+                public class ForExample {
+                    public static void main(String args[]) {
+                        for(int i=0; i<=10; i++)  // for condition  
+                        {
+                        System.out.println(i);
+                        }
+                   }
+              }
+              </pre>
+            </code>
+            <p>In the above code, it will directly print the numbers from 1 to 10.</p>
+            <p>The last type of control statement we will be discussing is Jump Statement.</p><br><br>
+            <h4>Jump statement:</h4><br><br>
+            <p> Jump statements are used to transfer the control to another part of your program. These are further classified into — <b>break and continue</b>.</p><br><br>
+            <p>Let’s learn about them in detail:</p><br><br>
+            <h4>Break statement:</h4><br><br>
+            <p>Whenever a break statement is used, the loop is terminated and the program control is resumed to the next statement following the loop. Let’s understand this better with a flowchart:</p><br><br>
+            <center>
+                <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*NdM5fvVfB2RtFLLlcr9QBA.png" alt="loading">
+                <p style="font-size: small;">Break Statement Flowchart - Java Tutorial</p>
+            </center><br><br>
+            <p>In this flowchart, the code will respond in the following steps:</p><br>
+            <ol>
+                <li> First of all, it will enter the loop where it checks the condition.</li>
+                <li> If the loop condition is false, it directly exits the loop.</li>
+                <li> If the condition is true, it will then check the break condition.</li>    
+                <li>  If break condition is true, it exists from the loop.</li>
+                <li>   If the break condition is false, then it will execute the statements that are remaining in the loop and then repeat the same steps.</li>
+            </ol><br>
+            <p>The syntax for this statement is just the ‘break’ keyword followed by a semicolon.</p><br><br>
+            <h4>Continue statement:</h4><br><br>
+            <p>Continue statement is another type of control statements. The continue keyword causes the loop to immediately jump to the next iteration of the loop. Let’s understand this better with a flowchart:</p><br>
+            <center> <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*Ti6jix05nC1Po7LsPlO58w.png" alt="loading"></center>
+            <ol>
+                <li>First of all, it will enter the loop where it checks the condition.</li>
+                 <li>If the loop condition is false, it directly exits the loop.</li>
+                <li>If the loop condition is true, it will execute block 1 statements.</li>
+                <li> After that it will check for ‘continue’ statement. If it is present, then the statements after that will not be executed in the same iteration of the loop.</li>
+                 <li>If ‘continue’ statement is not present, then all the statements after that will be executed.</li>
+                 <br>
+            </ol>
+            <p>The syntax is just the ‘continue’ keyword followed by a semicolon.
+                Next, let us see what are classes and objects in Java</p><br><br>
+                <h4>Classes and Objects</h4><br>
+                <p>A class in Java is a blueprint that includes all your data. A class contains fields(variables) and methods to describe the behavior of an object. Let’s have a look at the syntax of a class.</p><br>
+                <code>
+                   <pre>
+                    class Abc {
+                        member variables // class body
+                          methods
+                   }
+                   </pre>
+                </code><br><br>
+                <p>But how can you access these member variables and methods? Here comes the concept <b> Object</b>.</p><br><br>
+                <p>An object is a major element in a class which has a state and behavior. It is an instance of a class which can access your data. Let’s see the syntax to create an object in Java:</p>
+                <br>
+                <center>
+                    <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*OZWNBq8U3_aJqWTDF2yNDQ.png" alt="loading">
+                    <p style="font-size: small;">The syntax of Java Objects - Java Tutorial</p>
+                </center>
+               <br><br>
+                <p>Here, Student is your class name followed by the name of the object. Then there is a “new” keyword which is used to allocate memory. Finally, there is a call to the constructor. This call initializes the new object.
+                    Now let’s see how can you call a method using an object in Java:</p><br><br>
+                    <br><br>
+                    <code>
+                      <pre>
+                        class Student()
+                        void display(); {            // Method
+                         ------                           // logic of method
+                        }
+                        public static void main(String args[]){
+                        Student obj=new Student();   // Created an object
+                        obj.display();               // Method called
+                         }
+                      </pre>
+                    </code><br><br>
+                    <p>Next, let us move ahead in our Java Tutorial blog where we’ll be discussing another key concept i.e. Arrays.</p><br><br>
+                    <h4>Arrays</h4>
+                    <p>Arrays in Java is similar to that of C++ or any other programming language. An array is a data structure which holds the sequential elements of the same type.</p><br><br>
+                    <p>Let’s say you want to store 50 numbers. Instead of declaring individual variables, such as number0, number1, … and so on. You can declare one array variable — “numbers” and use number[0], number[1] to represent individual variables. This will ease your task and minimizes the redundancy.</p>
+                    <br><br>
+                    <p>Each array has two components: <b>index and value</b>. Refer to the below image for better understanding:</p><br>
+                    <center> <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*jJXsfkRV8lp9AayruxGN0w.png" alt="loading">
+                        <p style="font-size: small;">Components of Array - Java Tutorial</p></center>
+                    <br><br>
+                    <p>Here the indexing starts from zero and goes till (n-1) where n= size of the array. Let’s say you want to store 10 numbers, then the indexing starts from zero and goes till 9.</p><br><br>
+                    <h4>There are two types of arrays in Java:</h4>
+                    <ol>
+                        <li><b>Single-dimension Array</b></li>
+                         <li><b>   Multi-dimension Array</b></li>
+                    </ol><br>
+                    <h4>Single-dimension Array:</h4>
+                    <p>In a single-dimension array, a list of variables of the same type can be accessed by a common name. You can initialize the array using the following syntax:</p><br><br>
+                    <p>int a[] = new int[12];</p>
+                    <p>You can refer to the below image where I have stored data with respect to the given index.</p>
+                    <br><br>
+                    <center><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*-s7XdmShJGnSgGD2RQlrRw.png" alt="loading"></center>
+                    <h4>Multi-dimension Array:</h4><br>
+                    <p>In a multi-dimension array, your data is stored in a matrix form. Here, you can initialize the array using the following syntax:</p><br><br>
+                    <p>int table[][]= new int[4][5];</p><br><br>
+                    <p>It is quite similar to the matrix that we use in mathematics. Refer to the below image where I have stored data with respect to different dimensions.</p><br><br>
+                    <center>  <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*RItyOF4W7GN1CxSbdfq7cw.png" alt="loading">
+                        <p style="font-size: small;">Multi - Dimension Array</p></center>
+                    <br><br>
+                    <p>Thus, arrays help you in optimizing the code where you can insert the data at any location.</p><br><br>
+                    <p>Let’s see the below code to understand the concept of an array in Java.</p><br><br>
+                    <code>
+                        <pre>
+                            import java.util.*;
+                        public class ArrayExample {
+                        public static void main( String args[]) {
+                        double invoice[][]= new double[10][2];  // Initializing array
+                        Scanner obj= new Scanner(System.in);    // creating a scanner object to take input from user
+                        for(i=0;i<10;i++){                       // nested for loops
+                        for(j=0;j<2;j++);{
+                               System.out.println("Enter the value");
+                        invoice[i][j]=obj.nextDouble();         // store values to array    
+                        for(i=0;i<10;i++){
+                        for(j=0;j<2;j++) {
+                               System.out.println(invoice[i][j]);
+                                      }
+                                  }
+                              }
+                         }
+                         </pre>
+                    </code>
+                    <p>Finally, we come to our last topic in our articlei.e Object Oriented programming concepts.</p><br><br>
+                    <h4>OOPs Concept</h4>
+                    <p>We have already discussed classes and objects in Java. Let’s discuss the 4 main concepts of object-oriented programming - Inheritance, Encapsulation, Polymorphism, and Abstraction.</p>
+                    <p>Let’s begin with the first concept i.e. <b>Inheritance.</b></p><br>
+                    <h4>Inheritance:</h4>
+                    <p>
+                        Most of you must be familiar with inheritance. Inheritance is a process where one class acquires the properties of another. But whose properties are inherited? Here we have two classes, a child class which inherits the properties of a base class.
+                        A Class which inherits the properties are known as <b>Child class.</b> It is also referred to as the derived class or a subclass. Next, the class whose properties are inherited are known as <b>Parent class</b> or a base class.</p><br><br>
+                        <p>Let’s understand these classes by looking at this real-life example of animals </p>
+                        <center>
+                            <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*OJN78Bap6I39oP-K6mQBFg.png" alt="loading">
+                            <p style="font-size: small;">Inheritance Example - Java Tutorial</p>
+                        </center>
+                        <br><br>
+                        <p>In the above image, Animal is the superclass whereas amphibians, reptiles, mammals, and birds are your child classes which are inheriting the properties from ‘Animal’ class.</p><br><br>
+                        <h4>Encapsulation:</h4><br><br>
+                        <p>Encapsulation in Java is a mechanism of wrapping up the data and code together as a single unit. Refer to the below image where all your methods, variables are binded together in a single class.</p>
+                        <center>
+                            <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*zOZ7ScAI_TA5RTV9SCx6FQ.png" alt="loading"><br><br>
+                        <p>In encapsulation, the variables of a class will be hidden from other classes and can be accessed only through the methods of their current class.</p>
+                        </center>
+                        <br>
+                        <h4>Polymorphism:</h4>
+                        <p>Polymorphism is the ability of a variable, function or object to take multiple forms. The most common use of polymorphism in OOPs occur when a parent class is used to refer a child class object. Polymorphism is also achieved through function overloading. Don’t worry! I will be explaining the whole concept in my next blog. For now, let’s take a real life scenario where a teacher tells the student to draw different shape/figure having different functionalities.</p>
+                        <center>
+                            <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*qfEA4ym7aGzqQdzNg_cPBA.png" alt="loading">
+                        <p style="font-size: small;">Polymorphism Example - Java Tutorial</p>
+                        </center>
+                        <br><br>
+                        <p>Let’s say I want to draw a specific shape which already has multiple functions present as part of my program. So the functions that are dealing with shape, I’ll call them as draw(). Now based on the values that I have passed to these functions, it will draw different shapes. Let’s say in case of a rectangle, I am passing two values — length and breadth. Similarly, for a circle, I am passing a radius. Based on the values you pass, the different function will be called that serve different purposes. So this can be achieved through function overloading. Stay tuned, the concept of function overloading will be covered in detail in my next blog.</p><br>
+                        <h4>Abstraction:</h4><br>
+                        <p>It is basically the quality of dealing with ideas rather than events. Abstraction is the methodology of hiding the implementation details from the user and only providing the functionality to the users. Let’s see this real-life example of a car where I’ll help you understand what exactly abstraction is</p><br>
+                        <center>
+                            <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*Elt85Png7aR3ay5_eb9z7w.png" alt="loading"><br><br><p style="font-size: small;">Abstraction Example - Java Tutorial</p>
+                        </center>
+                        <p>If you consider the case of this car, here the mechanic is repairing a certain function in a car. But the user or you can say driver doesn’t want to know about these things, he just wants his car back in a working condition. So here, you basically segregate the implementation and show the other person what he actually wants to see and that exactly refers to abstraction.</p><br><br>
+                        <p>With this, we come to an end to this blog.If you wish to check out more articles on the market’s most trending technologies like Artificial Intelligence, DevOps, Ethical Hacking, then you can refer to Edureka’s official site.</p>
+                        <p>Do look out for other articles in this series which will explain the various other aspects of Java.</p>
+
+
+        </figcaption>
+    </figure>
+  </div>
+</body>
+</html>

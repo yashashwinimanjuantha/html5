@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main {
+            min-height: 100vh;
+            background-color: rgb(5, 12, 9);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #d8d8d802;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ebebeb;
+            font-weight: 600;
+        }
+
+        header nav ul .active a {
+            color: #3ec47a;
+        }
+
+        .main-btn {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 100px;
+            color: #fff;
+            background-color: #007233;
+        }
+
+        .blur1 {
+            width: 300px;
+            height: 100%;
+            background-color: #7afcb536;
+            position: absolute;
+            filter: blur(200px);
+            left: 0px;
+            top: 0;
+            z-index: -1;
+        }
+
+        .blur2 {
+            width: 300px;
+            height: 100%;
+            background-color: #88f7ba36;
+            position: absolute;
+            filter: blur(200px);
+            right: 0px;
+            top: 0;
+        }
+
+        .blur3 {
+            width: 200px;
+            height: 200px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            left: 0px;
+            top: 0;
+        }
+
+        .blur4 {
+            width: 200px;
+            height: 200px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            right: 300px;
+            top: 300px;
+        }
+
+        .heading {
+            color: #fff;
+            font-size: 4rem;
+        }
+
+        .hero {
+            z-index: 10;
+            display: flex;
+        }
+
+        .hero-left {
+            padding: 5%;
+            flex: 1;
+        }
+
+        .hero-right {
+            position: relative;
+            flex: 1;
+            z-index: 10;
+        }
+
+        .card {
+            margin-top: 70px;
+            transform: translateY(50px);
+        }
+
+        .finger {
+            position: absolute;
+            top: 350px;
+            right: 310px;
+        }
+
+        .hand {
+            z-index: -1;
+            transform: translateX(50px);
+            position: absolute;
+            right: 51px;
+            bottom: -95px;
+        }
+
+        .circle {
+            position: absolute;
+            right: 350px;
+            bottom: 0px;
+            animation: rotate-anim 5s linear infinite;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 396px;
+            bottom: 40px;
+            animation: moving-anim 1.5s linear infinite alternate;
+        }
+
+        @keyframes rotate-anim {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moving-anim {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .text-green {
+            color: #3ec47a;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: gray;
+            font-weight: 600;
+        }
+
+        .profiles {
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .images {
+            display: flex;
+            gap: 5px;
+        }
+
+        .images img {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-radius: 100px;
+        }
+
+        .images img:nth-child(2) {
+            transform: translateX(-25px);
+        }
+
+        .images img:nth-child(3) {
+            transform: translateX(-50px);
+        }
+
+        .heading2 {
+            color: lightgray;
+            font-size: 2rem;
+        }
+
+        .rating {
+            padding: 10px 15px;
+            border: 1px solid #3ec47a52;
+            min-width: 240px;
+            border-radius: 10px;
+        }
+
+        .icons {
+            display: flex;
+            margin-top: 10px;
+            gap: 5px;
+        }
+
+        .icons .subtitle {
+            margin-left: 20px;
+        }
+        .blur21{
+            width: 180px;
+            height: 80px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(60px);
+            left: 200px;
+            top: 250px;
+
+           
+        }
+        .blur22{
+            width: 180px;
+            height: 80px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(60px);
+            left: 540px;
+            top: 250px;
+        }
+        .blur23{
+            width: 180px;
+            height: 80px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(60px);
+            left: 900px;
+            top: 250px;
+        }
+        .blur24{
+            width: 180px;
+            height: 80px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(60px);
+            left: 1100px;
+            top: 250px;
+        }
+        .section2{
+            width: 100%;
+            min-height: 80vh;
+            background-color: rgb(5, 12, 9);
+            position: relative;
+            
+        }
+        .main2{
+            padding-top: 40px;
+            color: white;
+            font-size: 30px;
+            
+        }
+        .hero2{
+            margin: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            gap: 30px;
+        }
+        .division{
+            border: 1px solid rgba(21, 65, 19, 0.392);
+            padding: 60px;
+            margin-top: 30px;
+            border-radius: 20px;
+            font-size: 25px;
+          
+        }
+        .section3{
+            width: 100%;
+            min-height: 80vh;
+            background-color: rgb(5, 12, 9);
+
+        }
+        .hero3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left{
+            flex: 1;
+        }
+        .right{
+            flex: 1;
+            color: white;
+            margin-left: 40px;
+        }
+        .left img{
+            width: 600px;
+            height: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 160px;
+        }
+        ul{
+          list-style-type: disc;
+          color: #3ec47a;
+          padding: 10px;
+        }
+        ul,li{
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .section4{
+            width: 100%;
+            min-height: 80vh;
+            background-color: rgb(5, 12, 9);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+        .blur{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .img{
+            width: 350px;
+            height: 250px;
+            border: 1px solid #007233;
+            margin-top: 30px;
+            background-color: #1e5d3a29;
+            padding: 20px;
+            
+        }
+        .blur :hover{
+            transform:translateY(-30px);
+           transition: 1s;
+        }
+        
+        .blur31
+        {
+            width: 180px;
+            height: 180px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            left: 350px;
+            top: 280px;
+            
+        }
+        .blur32
+        {
+            width: 180px;
+            height: 180px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            left: 650px;
+            top: 280px;
+        }
+        .blur33
+        {
+            width: 180px;
+            height: 180px;
+            background-color: #39ff9294;
+            position: absolute;
+            filter: blur(90px);
+            left: 950px;
+            top: 280px;
+        }
+        .section5{
+            width: 100%;
+            min-height: 80vh;
+            background-color: rgb(5, 12, 9);
+            color: white;
+            padding: 30px;
+        }
+        .section5 img{
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .section5 marquee{
+            margin-top: 50px;
+        }
+        .section6{
+            width: 100%;
+            min-height: 90vh;
+            background-color: rgb(5, 12, 9);
+            color: white;
+            padding: 30px;
+
+        }
+        .hero6{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            gap: 40px;
+        }
+        .rotate img{
+            width: 400px;
+            height: 250px;
+            border-radius: 20px;
+        }
+        .rotate:hover{
+            transform:translateY(30px);
+            transition: 1s;
+            color: #3ec47a;
+            
+        }
+           
+    </style>
+
+    <!-- link for aos animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- link for fonts or icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section class="main">
+        <div class="blur1"></div>
+        <div class="blur2"></div>
+        <div class="blur3"></div>
+        <div class="blur4"></div>
+        <header>
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2874d2aa7563e97ed6_Nav%20Logo.svg"
+                alt="loading">
+
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Price</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+
+            <button class="main-btn">Contact Us</button>
+        </header>
+
+        <div class="hero">
+            <div class="hero-left">
+                <h1 class="heading">
+                    Transform your <br><span class="green-text">finances</span> with <br>trusted <br>accountants.
+                </h1>
+                <p class="subtitle">Rorem ipsum dolor sit amet consectetur. Blandit varius tellus sed <br>maecenas
+                    tortor
+                    ut.</p>
+                <button class="main-btn">Contact Us</button>
+                <div class="profiles">
+                    <div class="images">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d29bea7984c4ada2d89_Reviwe%20Image%203.png"
+                            alt="profiles">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d299ec3635f82eca371_Reviwe%20Image%202.png"
+                            alt="profiles">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9c56c5ddf62e1ec8162e_ratting%20img.svg"
+                            alt="profiles">
+                    </div>
+                    <div>
+                        <h1 class="heading2">245K</h1>
+                        <p class="subtitle">Our Client</p>
+                    </div>
+
+                    <div class="rating">
+                        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2874d2aa7563e97ed6_Nav%20Logo.svg"
+                            alt="loading...">
+                        <div class="icons">
+                            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2aef411ecb7d3242cb_Ster%20Icon%201.svg"
+                                alt="loading"><img
+                                src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2a06b0d169d1a0117d_Ster%20Icon%202.svg"
+                                alt="loading">
+                            <p class="subtitle">5.0/4.50</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hero-right">
+                <img class="card"
+                    src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66e1229e10bf16edba66dfd9_card.svg"
+                    alt="">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9f60349b0256f938d50f_Hand.svg"
+                    alt="" class="hand">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66ce9f60c77b20539a8a0da3_Finger.svg"
+                    alt="" class="finger">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d2734818b4d505af5ae_Hero%20Icon.svg"
+                    alt="" class="circle">
+
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d251c4d550202c87a36_Dowon%20%20Icon.svg"
+                    alt="" class="arrow">
+            </div>
+        </div>
+
+    </section>
+    <section class="section2">
+       <div class="main2">
+        <center><h1>Important metrics <span style=color:#3ec47a;> reflecting </span> <br>our expertis.
+        </h1></center>
+        </div>
+        <div class="blur21">
+        </div>
+        <div class="blur22">
+        </div>
+        <div class="blur23">
+        </div>
+        <div class="blur24">
+        </div>
+    
+        <div class="hero2">
+            <div class="division">
+                <center><h1>15k</h1></center>
+                <h5>Happy clients</h5>
+            </div>
+            <div class="division">
+                <center><h1>10k</h1></center>
+                <h5>Team members</h5>
+            </div>
+            <div class="division">
+                <center><h1>100%</h1></center>
+                <h5>Customer satisfaction</h5>
+            </div>
+            <div class="division">
+                <center><h1>20 year</h1></center>
+                <h5>Years in Business</h5>
+            </div>
+           
+        </div>
+
+        
+        
+    </section>
+    <section class="section3">
+        <div class="hero3">
+            <div class="left">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d27674488656088fc87_Home%20About%20Image-p-800.jpg" alt="loading">
+            </div>
+            <div class="right">
+                <p style="padding: 30px;"><span style="color: #3ec47a; margin-top: 0px;">About Us</span></p>
+                <h1 style="font-size: 40px;padding: 20px;">Experience professional <br> <span style="color: #3ec47a;">accounting</span> with personal <br> touch.</h1>
+                <p style="padding: 20px;">Gorem ipsum dolor sit amet consectetur. Sed nec eu ullamcorper</p>
+                <ul>
+                    <li><p style="color: white;">Egestas non morbi blandit convallis.</p></li>
+                    <li><p style="color: white;">Ornare aliquet enim in semper consequat nibh.</p></li>
+                    <li><p style="color: white;">Euismod molestie augue sed sem nibh erat.</p>
+                    </li>
+                </ul>
+                <button class="main-btn">More About Us</button>
+            </div>
+        </div>
+    </section>
+    <section class="section4">
+        <div class="blur31"></div>
+        <div class="blur32"></div>
+        <div class="blur33"></div>
+        <center><h1 style="padding-bottom: 20px; font-size: 50px;">Efficient accounting services  <br>for <span style="color: #3ec47a;"> business growth.</span></h1>
+        <h3>Leo tincidunt viverra id tincidunt nam. Leo cursus mattis nisi accumsan faucibus  <br>mauris ut fames.</h3></center>
+        <div class="blur">
+            <div class="img">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac27a43762e556ae10e5_Service%20Icon%206.svg" alt="loading" style="margin-left: 150px;">
+               <center> <h3>Tax Planning</h3>
+                <p style="color: grey; padding-top: 10px;"> The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed <br> for</p></center>
+            </div>
+            <div class="img">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac1aa43762e556ae05f0_Service%20Icon%205.svg" alt="loading" style="margin-left: 150px;">
+                <center><h3>Tax Planning</h3>
+                   <p style="color: grey; padding-top: 10px;"> The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed <br> for</p></center>
+            </div>
+            <div class="img">
+                <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ac0b5b2b208a64f87b2b_Service%20Icon%204.svg" alt="laoding" style="margin-left: 150px;">
+                <center><h3>BookKeeping Service</h3> <p style="color: grey;padding-top: 10px;"> The Alico - Insurance Agency WordPress Theme  is a  WordPress  theme designed <br> for</p></center>
+            </div>
+        </div>
+    </section>
+    <section class="section5">
+        <center><h1 style="font-size: 35px;">Trusted by leading brands in <br> accounting excellence
+        </h1></center>
+       <marquee behavior="" direction="left" scroll-amount="500">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250b70a04ae8d5a93c_Brand%20Logo%203.svg" alt="loading">
+        <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd381d/66c99d250eb4645715d8b2c1_Brand%20Logo%204.svg" alt="">
+
+
+
+       </marquee><br><br><br><br><br>
+      <center> <h1 style="font-size: 40px;">Successful <span style="color: #3ec47a;">financial projects</span> <br> driving business growth.
+      </h1></center>
+      <center>      <p style="padding: 20px;">Thsum dolor sit amet consectetur. Egestas vel euismod <br> bibendum elementum. Dolor tortor etiam diam nulla massa.</p>
+      </center>
+    </section>
+    <section class="section6">
+       <div class="hero6">
+        <div class="rotate">
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad693a7f2530ac545d0b_Project%20Image%206-p-500.jpg" alt="">
+            <h1 style="padding: 10px;">Portfolio Diverfication <br> Strategies</h1>
+        </div>
+        <div class="rotate">
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad70387b861aa81172c1_Project%20Image%205-p-500.jpg" alt="">
+            <h1 style="padding: 10px;">Long-term Budget <br>Developement</h1>
+        </div>
+        <div class="rotate">
+            <img src="https://cdn.prod.website-files.com/66c98887ce290badf1dd3835/66c9ad5bbea7984c4ae82da7_Project%20Image%204-p-500.jpg" alt="">
+            <h1 style="padding: 10px;">Faurd Detection System</h1>
+        </div>
+       </div>
+       <br><br><br><br>
+       <h1>Success stories from <br>our happy clients.</h1>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
